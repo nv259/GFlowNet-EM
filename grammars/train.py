@@ -128,8 +128,8 @@ parser.add_argument("--wd", type=float, default=0.0, help="weight decay")
 parser.add_argument(
     "--grad_acc", type=int, default=1, help="number of gradient accumulation steps"
 )
-parser.add_argument("--batch_size", type=int, default=32, help="batch size")
-parser.add_argument("--valid_batch_size", type=int, default=64, help="batch size")
+parser.add_argument("--batch_size", type=int, default=8, help="batch size")
+parser.add_argument("--valid_batch_size", type=int, default=16, help="batch size")
 parser.add_argument(
     "--batch_group_size",
     type=int,
@@ -139,7 +139,7 @@ parser.add_argument(
 
 # Train
 parser.add_argument("--seqlen", type=int, default=20, help="sequence length")
-parser.add_argument("--epochs", type=int, default=999, help="upper epoch limit")
+parser.add_argument("--epochs", type=int, default=50, help="upper epoch limit")
 parser.add_argument(
     "--scheduler_epochs", type=int, default=-1, help="upper epoch limit"
 )
